@@ -39,7 +39,7 @@
 
         .animation2 {
             opacity: 0;
-            transform:  translate(0, -15px);
+            transform: translate(0, -15px);
             transition: opacity 2s ease-out, transform 2s ease-in-out;
         }
     </style>
@@ -114,7 +114,7 @@
             var second = dateAndTime.getSeconds();
 
             switch (month) {
-                case 0: month ="January";
+                case 0: month = "January";
                 case 1: month = "Febuary";
                 case 2: month = "March";
                 case 3: month = "April";
@@ -129,9 +129,9 @@
             }
             document.getElementById("calendar").innerText = month + " " + date + ", " + year;
 
-            if (hour < 10) {hour = "0" + hour;}
-            if (minute < 10) {minute = "0" + minute;}
-            if (second < 10) {second = "0" +second;}
+            if (hour < 10) { hour = "0" + hour; }
+            if (minute < 10) { minute = "0" + minute; }
+            if (second < 10) { second = "0" + second; }
 
             document.getElementById("time").innerText = hour + ":" + minute + ":" + second;
         }
@@ -167,7 +167,8 @@
     <div class="p-3 row bg-black text-white page align-content-center justify-content-center">
         <div>
             <h1 class="display-1 animation">Profile</h1>
-            <p class="animation">I am currently a second year student majoring in Information Technology at BTEC FPT British College. I
+            <p class="animation">I am currently a second year student majoring in Information Technology at BTEC FPT
+                British College. I
                 have a pretty good academic record and have received an excellent student award</p>
         </div>
         <div>
@@ -219,19 +220,27 @@
 
     <div class="p-3 row bg-white text-black page align-content-center justify-content-center">
         <div class="col-md-3 row align-items-center align-content-center">
-            <h1 class="display-1 animation">Sort Skills</h1>
-            <p class="animation">Resovle Problem</p>
-            <p class="animation">Working Group</p>
-            <p class="animation">Patient</p>
+            <div class="col-md-12 col-6">
+                <h1 class="display-1 animation">Sort Skills</h1>
+            </div>
+            <div class="col-md-12 col-6">
+                <p class="animation">Resovle Problem</p>
+                <p class="animation">Working Group</p>
+                <p class="animation">Patient</p>
+            </div>
         </div>
         <div class="col-md-6">
             <img src="img/IMG_0879.jpeg" class="w-75 rounded-3 shadow-lg animation" alt="">
         </div>
         <div class="col-md-3 row align-items-center align-content-center">
-            <h1 class="display-1 animation">Hobby</h1>
-            <p class="animation">Design</p>
-            <p class="animation">Photography</p>
-            <p class="animation">Coding</p>
+            <div class="col-md-12 col-6">
+                <h1 class="display-1 animation">Hobby</h1>
+            </div>
+            <div class="col-md-12 col-6">
+                <p class="animation">Design</p>
+                <p class="animation">Photography</p>
+                <p class="animation">Coding</p>
+            </div>
         </div>
     </div>
 
