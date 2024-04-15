@@ -23,12 +23,23 @@
             font-family: 'SF Pro Display', sans-serif;
         }
 
+        .bg-img {
+            background-image: url(img/IMG_4533.JPG);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
         .page {
             height: 100vh;
         }
 
-        .bi:hover {
-            animation: rotate3d 2s ease-out;
+        .page-2 {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .bi-facebook:hover {
+            animation: rotate3rgba(0, 0, 0, 0.5)
         }
 
         .animation {
@@ -130,9 +141,9 @@
             }
             document.getElementById("calendar").innerText = month + " " + date + ", " + year;
 
-            if (dateAndTime.getHours() < 10) { hour = "0" + dateAndTime.getHours(); } else {hour = dateAndTime.getHours();}
-            if (dateAndTime.getMinutes() < 10) { minute = "0" + dateAndTime.getMinutes(); } else {minute = dateAndTime.getMinutes();}
-            if (dateAndTime.getSeconds() < 10) { second = "0" + dateAndTime.getSeconds(); } else {second = dateAndTime.getSeconds();}
+            if (dateAndTime.getHours() < 10) { hour = "0" + dateAndTime.getHours(); } else { hour = dateAndTime.getHours(); }
+            if (dateAndTime.getMinutes() < 10) { minute = "0" + dateAndTime.getMinutes(); } else { minute = dateAndTime.getMinutes(); }
+            if (dateAndTime.getSeconds() < 10) { second = "0" + dateAndTime.getSeconds(); } else { second = dateAndTime.getSeconds(); }
 
             document.getElementById("time").innerText = hour + ":" + minute + ":" + second;
         }
@@ -141,85 +152,97 @@
     </script>
 </head>
 
-<body class="text-center" onload="displayDateAndTime()">
-    <header class="p-3 row bg-black text-white">
-        <div class="col-6 text-start">
-            <p class="animation2" id="calendar"></p>
-        </div>
-        <div class="col-6 text-end">
-            <p class="animation2" id="time"></p>
-        </div>
+<body class="text-center text-white bg-img" onload="displayDateAndTime()">
+    <header class="p-5 d-flex text-white justify-content-between">
+        <div class="p-2 page-2 bg-gradient rounded-pill d-flex align-items-center animation2" id="calendar"></div>
+        <div class="p-2 page-2 bg-gradient rounded-pill d-flex align-items-center animation2" id="time"></div>
     </header>
 
-    <div class="p-3 row bg-black text-white page align-content-center">
-        <h1 class="display-1 animation">Welcome to my website!</h1>
+    <div class="p-5 d-flex page align-items-center justify-content-center">
+        <div
+            class="p-5 d-flex page-2 bg-gradient shadow-lg rounded-pill justify-content-center align-items-center">
+            <h1 class="display-1 animation">Welcome to my website!</h1>
+        </div>
     </div>
 
-    <div class="p-3 row bg-white text-black page align-content-center justify-content-center">
-        <div class="col-md-6 row align-content-center align-items-center">
+    <div class="p-5 d-flex flex-wrap page align-content-center justify-content-center">
+        <div class="col-md-6 mb-md-0 mb-3 p-1 row page-2 bg-gradient justify-content-center align-content-center align-items-center rounded-5 shadow-lg">
             <h1 class="display-1 animation">Nguyen Minh Dang</h1>
             <p class="animation">A second year student majoring in Information Technology</p>
         </div>
-        <div class="col-md-6">
-            <img src="img/IMG_1740.jpeg" class="w-75 rounded-3 shadow-lg animation" alt="">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="img/IMG_1740.jpeg" class="w-75 rounded-5 shadow-lg" alt="">
         </div>
     </div>
 
-    <div class="p-3 row bg-black text-white page align-content-center justify-content-center">
-        <div>
-            <h1 class="display-1 animation">Profile</h1>
-            <p class="animation">I am currently a second year student majoring in Information Technology at BTEC FPT
-                British College. I
-                have a pretty good academic record and have received an excellent student award</p>
-        </div>
-        <div>
-            <img src="img/IMG_1668.jpeg" class="w-75 rounded-3 shadow-lg animation" alt="">
+    <div class="p-5 page d-flex flex-wrap align-content-center justify-content-center">
+        <div class="p-5 d-flex flex-wrap page-2 bg-gradient align-content-center justify-content-center rounded-5 shadow-lg">
+            <div>
+                <h1 class="display-1 animation">Profile</h1>
+                <p class="animation">I am currently a second year student majoring in Information Technology at BTEC FPT
+                    British College. I
+                    have a pretty good academic record and have received an excellent student award</p>
+            </div>
+            <div>
+                <img src="img/IMG_1668.jpeg" class="w-100 rounded-5 shadow-lg" alt="">
+            </div>
         </div>
     </div>
 
-    <div class="p-3 row bg-white text-black page align-content-center justify-content-center">
-        <div class="col-md-6">
-            <img src="img/IMG_0978.jpeg" class="w-75 rounded-3 shadow-lg animation" alt="">
+    <div class="p-5 d-flex flex-wrap page align-content-center justify-content-center">
+        <div class="col-md-6 mb-md-0 mb-3 d-flex align-items-center justify-content-center">
+            <img src="img/IMG_0978.jpeg" class="w-75 rounded-5 shadow-lg" alt="">
         </div>
-        <div class="col-md-6 row align-content-center align-items-center">
+        <div class="col-md-6 p-1 row page-2 bg-gradient justify-content-center align-content-center align-items-center rounded-5 shadow-lg">
             <h1 class="display-1 animation">Education</h1>
             <p class="animation">BTEC FPT British College</p>
         </div>
     </div>
 
-    <div class="p-3 row bg-black text-white page align-content-center justify-content-center">
-        <div>
-            <h1 class="display-1 animation">Hard Skills</h1>
-        </div>
-        <div>
-            <img src="img/IMG_0730.jpeg" class="w-75 rounded-3 shadow-lg animation" alt="">
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-4">
-                <div class="progress bg-secondary animation">
-                    <div class="progress bg-dark" role="progressbar" style="width: 70%" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="animation">Interface Design 70/100</p>
+    <div class="p-5 d-flex flex-wrap page align-content-center justify-content-center">
+        <div class="p-5 d-flex flex-wrap page-2 bg-gradient align-content-center justify-content-center rounded-5 shadow-lg">
+            <div>
+                <h1 class="display-1 animation">Hard Skills</h1>
             </div>
-            <div class="col-md-4">
-                <div class="progress bg-secondary animation">
-                    <div class="progress bg-dark" role="progressbar" style="width: 60%" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <p class="animation">Website Design 60/100</p>
+            <div>
+                <img src="img/IMG_0730.jpeg" class="w-75 rounded-3 shadow-lg" alt="">
             </div>
-            <div class="col-md-4">
-                <div class="progress bg-secondary animation">
-                    <div class="progress bg-dark" role="progressbar" style="width: 80%" aria-valuenow="20"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="mt-5 d-flex flex-wrap justify-content-around align-items-center">
+                <div class="p-2">
+                    <div class="progress bg-secondary animation">
+                        <div class="progress bg-dark" role="progressbar" style="width: 70%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-around align-items-center">
+                        <div class="p-2 animation">Interface Design</div>
+                        <div class="p-2 animation">70/100</div>
+                    </div>
                 </div>
-                <p class="animation">Graphic Design 80/100</p>
+                <div class="p-2">
+                    <div class="progress bg-secondary animation">
+                        <div class="progress bg-dark" role="progressbar" style="width: 60%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <div class="p-2 animation">Website Design</div>
+                        <div class="p-2 animation">60/100</div>
+                    </div>
+                </div>
+                <div class="p-2">
+                    <div class="progress bg-secondary animation">
+                        <div class="progress bg-dark" role="progressbar" style="width: 80%" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <div class="p-2 animation">Graphic Design</div>
+                        <div class="p-2 animation">80/100</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="p-3 row bg-white text-black page align-content-center justify-content-center">
+    <div class="p-5 row bg-black text-white page align-content-center justify-content-center">
         <div class="col-md-3 row align-items-center align-content-center">
             <div class="col-md-12 col-6">
                 <h1 class="display-1 animation">Sort Skills</h1>
@@ -245,7 +268,7 @@
         </div>
     </div>
 
-    <div class="p-3 row bg-black text-white page align-content-center">
+    <div class="p-5 row page-2 page align-content-center">
         <h1 class="display-1 animation">Contact me via</h1>
         <p class="animation">Email: nmdang6767@gmail.com</p>
         <p class="animation">Phone: 0397442964</p>
